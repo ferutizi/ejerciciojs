@@ -29,31 +29,23 @@ function imprimirNumeros2(a) {
 }
 //EJERCICIO 1
 
-function elemento() {
+ function elemento() {
     for(let i = 0; i < array.length; i++) {
-        if(i == 0) {
-            console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
-        }
-        else{
-            console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
-        }
+        console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
+    }
+}
+
+function elemento2() {
+    let i = 0;
+    while(i < array.length) {
+        console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
+        i++;
     }
 }
 
 let array = [4, 5, 2];
 elemento(array);
-
-//EJERCICIO 2
-/* function posicionPar() {
-    for(let i = 0; i < array2.length; i++) {
-        if(i % 2 == 0) {
-            console.log(0);
-        }
-        else{
-            console.log(array2[i]);
-        }
-    }
-} */
+elemento2(array);
 
 let array2 = [3, 4, 2, 1, 8, 5];
 posicionPar(array2);
@@ -90,7 +82,7 @@ function pertenece(arr, s) {
 return sPertenece;
 }
 
-let sPertenece
+let sPertenece;
 let arr = ['papa', 'tomate', 'pera'];
 pertenece(arr, 'tomate');
 pertenece(arr, 'manzana');
