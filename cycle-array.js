@@ -17,15 +17,80 @@ imprimirNumeros(10);
 
 //WHILE
 
-let finish = false;
-let a = 5;
-while (!finish) {
-    if (a == 1) {
-        finish = true;
+function imprimirNumeros2(a) {
+    let finish = false;
+    while (!finish) {
+        if (a == 1) {
+            finish = true;
+        }
+        a = a -1;
+        console.log(a);
     }
-    a = a -1;
-    console.log(a);
 }
-
 //EJERCICIO 1
 
+function elemento() {
+    for(let i = 0; i < array.length; i++) {
+        if(i == 0) {
+            console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
+        }
+        else{
+            console.log('el elemento de la posicion ' + i + ' es: ' + array[i]);
+        }
+    }
+}
+
+let array = [4, 5, 2];
+elemento(array);
+
+//EJERCICIO 2
+/* function posicionPar() {
+    for(let i = 0; i < array2.length; i++) {
+        if(i % 2 == 0) {
+            console.log(0);
+        }
+        else{
+            console.log(array2[i]);
+        }
+    }
+} */
+
+let array2 = [3, 4, 2, 1, 8, 5];
+posicionPar(array2);
+
+function posicionPar() {
+    for(let i = 0; i < array2.length; i++) {
+        if(i % 2 == 0) {
+            array2[i] = 0;
+        }
+        else{
+            array2[i] = i;
+        }
+    }
+    console.log(array2)
+}
+
+//EJERCICIO 3
+
+function agregarElemento() {
+    array2.push(0);
+    console.log(array2)
+}
+
+agregarElemento(array2);
+
+//EJERCICIO 4
+function pertenece(arr, s) {
+    if(arr.includes(s)){
+        sPertenece = true;
+    }
+    else {
+        sPertenece = false;
+    }
+return sPertenece;
+}
+
+let sPertenece
+let arr = ['papa', 'tomate', 'pera'];
+pertenece(arr, 'tomate');
+pertenece(arr, 'manzana');
