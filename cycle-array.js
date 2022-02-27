@@ -50,13 +50,10 @@ elemento2(array);
 let array2 = [3, 4, 2, 1, 8, 5];
 posicionPar(array2);
 
-function posicionPar() {
+function posicionPar(array) {
     for(let i = 0; i < array2.length; i++) {
         if(i % 2 == 0) {
             array2[i] = 0;
-        }
-        else{
-            array2[i] = i;
         }
     }
     console.log(array2)
@@ -73,16 +70,36 @@ agregarElemento(array2);
 
 //EJERCICIO 4
 function pertenece(arr, s) {
+    let sPertenece;
     if(arr.includes(s)){
         sPertenece = true;
     }
     else {
         sPertenece = false;
     }
-return sPertenece;
+    return sPertenece;
 }
 
-let sPertenece;
+function pertenece2(arr, s) {
+    let sPertenece;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] == s) {
+            return true
+        }
+    }
+    return false;
+}
+
 let arr = ['papa', 'tomate', 'pera'];
-pertenece(arr, 'tomate');
-pertenece(arr, 'manzana');
+let sarasa = pertenece2(arr, 'tomate');
+sarasa = pertenece2(arr, 'manzana');
+
+function digito(n) {
+    while(n > 0) {
+        let d = n % 10;
+        console.log(d);
+        n = Math.trunc(n / 10);
+    }
+}
+
+digito(548);
